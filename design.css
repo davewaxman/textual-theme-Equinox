@@ -9,12 +9,14 @@
 }
 
 body {
-  color: #f2f2f2;
+  color: #B7B7B7;
+  height: 100%;
   z-index: 100;
   font-size: 12px;
-  background-color: #1d1d1d;
-  font-family: "Helvetica Neue";
-  font-weight: 200;
+  background-color: #001f2a;
+  font-family: system, -apple-system,
+      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+  font-weight: 400;
   overflow-y: visible;
 }
 
@@ -62,7 +64,8 @@ body[dir=rtl] .senderContainer {
   line-height: 35px;
   text-align: center;
   font-size: 18px;
-  background: #363636;
+  background: #001f2a;
+  border: 1px solid #268BD2;
   padding: 5px;
   padding-left: 10px;
   opacity: 1; /* Set by JavaScript */
@@ -78,7 +81,7 @@ body[dir=ltr] .time {
   font-size: .91em !important;
   white-space: nowrap;
   float: right;
-  color: #999;
+  color: #586E75;
   -webkit-user-select: none;
   /*  font-weight: bold; */
   margin-right: 10px;
@@ -106,44 +109,55 @@ body[dir=ltr] .time {
 /* Links */
 
 a {
-  color: #ccc;
-  border-color: #ccc;
+  color: #FFFFFF; 
+  border-color: #FFFFFF;
   text-decoration: none;
   border-bottom: dotted 1px;
 
 }
 
 a:hover {
-  color: #64a5ff;
-  border-color: #64a5ff;
+  color: #268BD2; 
+  border-color: #268BD2;
 }
 
 /* Topic Bar */
+
 #topic_bar {
   top: 0;
   left: 0;
   right: 0;
-  padding-bottom: 5px;
   opacity: 0; /* Set by JavaScript */
   z-index: 400;
-  color: #dddddd;
-  overflow: hidden;
+  color: #8E8E8E;
   position: fixed;
-  padding: 7px 0.5em 7px;
+  padding: 2px 0.5em 3px;
   box-shadow: 0 1px 5px #777;
   border-bottom: 1px solid #404040;
-  -webkit-transition: opacity 0.8s linear;
   text-shadow: 1px 1px rgba(10, 10, 10, 0.7);
-  background: rgba(60, 60, 60, 0.91);
+  background: -webkit-linear-gradient(top, #073642 0%, #001f2a 100%);
+  -webkit-transition: opacity 0.8s linear;
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Topic bar hover additions contributed with permission from the project:
+  <https://github.com/hbang/Simplified-Light-Modifications> */
+
+#topic_bar:hover {
+  overflow: visible;
+  white-space: normal;
 }
 
 #topic_bar a,
-#topic_bar .channel {
-  color: #64a5ff;
-  border-color: #64a5ff;
+#topic_bar span.channel {
+  color: #8E8E8E;
+  border-color: #8E8E8E;
   text-shadow: 1px 1px rgba(10, 10, 10, 0.7);
 }
-
+/* @end */
 /* Hidden scrollback history bar */
 #scrolling_history {
   z-index: 400;
@@ -155,14 +169,18 @@ a:hover {
   box-shadow: 0 1px 5px #777;
   border-top: 1px solid #404040;
   text-shadow: 1px 1px rgba(10, 10, 10, 0.7);
-  background: rgba(31, 51, 81, 0.95);
+  color: #FFFFFF;
+  background-color: #859900;
   display: none;
   overflow: hidden;
 }
 
 #scrolling_history .senderContainer {
-  background: rgba(31, 51, 81, .95);
+  color: #FFFFFF;
+  background-color: #859900;
 }
+/* @group Images */
+
 
 
 /* Images */
@@ -218,11 +236,12 @@ body img {
 
 /* Remember Line */
 div[id=mark] {
+  clear: both;
   position: relative;
   z-index: 295;
   margin-top: -1px;
-  border-bottom: 1px solid;
-  border-color: #444;
+  border-bottom: 3px solid;
+  border-color: #D33682;
   -webkit-transition: 0.2s linear;
 }
 
@@ -249,12 +268,13 @@ body div.line[ltype=wallops] {
   border-bottom: none;
   border-top: none;
   border-left: none;
-  background-color: #1d2734;
+  color: #b58900;
+  /* background-color: #1d2734; Maybe remove?*/
 }
 
 body div[ltype=ctcp] .senderContainer,
 body div[ltype=notice] .senderContainer {
-  color: #f00;
+  color: #b58900;
   font-weight: 700;
   min-height:23px;
   width: 134px;
@@ -267,7 +287,7 @@ body div[ltype=notice] .senderContainer {
   bottom: 0;
   left: 0;
   text-overflow: ellipsis;
-  background-color: #161616;
+  /* background-color: #161616; */
 }
 
 body div[ltype=notice] .message {
@@ -285,9 +305,10 @@ body div[ltype=privmsg] .senderContainer {
   /*  font-weight: 700; */
   min-height:23px;
   width: 134px;
-  border-right: 1px solid rgb(64, 64, 64);
-  padding-right:7px;
-  background-color: #161616;
+  /* border-right: 3px solid rgb(64, 64, 64); */
+  border-right: 2px solid #586E75;
+  padding-right:12px;
+  background-color: #001f2a;
   text-align:right;
   display:inline-block;
   overflow: hidden;
@@ -305,7 +326,7 @@ body .senderContainer .swrapper {
 
 body div[ltype="privmsg"] .message {
   word-break: break-word;
-  color: #f2f2f2;
+  color: #B7B7B7;
 }
 
 body div[ltype="privmsg"][encrypted="true"] {
@@ -321,7 +342,7 @@ body div[ltype="privmsg"][highlight=true][encrypted="true"] {
 }
 
 body div[ltype=privmsg] p[ltype=myself] .message {
-  color: #f2f2f2;
+  color: #B7B7B7;
 }
 
 body div[ltype=privmsg] p span.effect[color-number=1]:not([bgcolor-number]) {
@@ -338,7 +359,7 @@ body div[ltype=action] .senderContainer {
   /*  font-weight: 700;*/
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  background-color: #1d1d1d;
+  background-color: #001f2a;
   height:22px;
   padding-right: 7px;
   text-align:right;
@@ -362,11 +383,11 @@ body div.line[ltype=dcc-file-transfer],
 body div.line[ltype=off-the-record-encryption-status] {
   color: #f2f2f2;
   z-index: 190;
-  background: #2f2f2f;
+  background: #001f2a;
   position: relative;
   padding: 2px 0 2px 0;
-  border-top: 1px solid #393939;
-  border-bottom: 1px solid #393939;
+  /* border-top: 1px solid #393939;
+  border-bottom: 1px solid #393939; */
 }
 
 body div.line[ltype=ctcp] .message,
@@ -387,35 +408,7 @@ body div.line[ltype=off-the-record-encryption-status]  .message {
 /* Message of the Day (MOTD) */
 /* 720, 721, 722 are used by ShadowIRCd for Oper MOTD. */
 /* 372, 375, 376 are normal MOTD shared by several IRCds. */
-body div.line[command="372"],
-body div.line[command="721"] {
-  border: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
 
-body div.line[command="375"],
-body div.line[command="720"] { /* Start. */
-  border-bottom: none;
-  padding-top: 2px;
-  padding-bottom: 3px;
-}
-
-body div.line[command="376"],
-body div.line[command="722"] { /* End. */
-  border-top: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-body div.line[command="372"] .message,
-body div.line[command="375"] .message,
-body div.line[command="376"] .message
-body div.line[command="720"] .message,
-body div.line[command="721"] .message,
-body div.line[command="722"] .message {
-  font-family: "Menlo" !important;
-}
 
 /* GENERAL EVENT */
 body span.message {
@@ -429,7 +422,7 @@ body span.message {
 }
 
 body div.event span.time {
-  color: #999;
+  color: #586E75;
   line-height: 19px;
   display: table-cell;
 }
@@ -441,20 +434,70 @@ body div.event span.message {
   padding-left: 0;
 }
 
+.line[command="372"],
+.line[command="721"] {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.line[command="375"],
+.line[command="720"] { /* Start. */
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+.line[command="376"],
+.line[command="722"] { /* End. */
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.line[command="372"] .message,
+.line[command="375"] .message,
+.line[command="376"] .message,
+.line[command="720"] .message,
+.line[command="721"] .message,
+.line[command="722"] .message {
+  color: #586E75;
+  font-family: "EspressoMono-Regular", "Menlo" !important;
+  z-index: 190;
+  position: relative;
+}
+
+.line[command="311"] .message,
+.line[command="378"] .message,
+.line[command="319"] .message,
+.line[command="312"] .message,
+.line[command="379"] .message,
+.line[command="330"] .message,
+.line[command="307"] .message,
+.line[command="317"] .message,
+.line[command="275"] .message,
+.line[command="671"] .message {
+  color: #2aa198;
+  z-index: 190;
+  position: relative;
+}
 body div.line[ltype=join],
 body div.line[ltype=part],
 body div.line[ltype=quit],
 body div.line[ltype=mode],
 body div.line[ltype=nick],
 body div.line[ltype=topic],
-body div.line[ltype=kill],
-body div.line[ltype=kick],
 body div.line[ltype=website] {
   font-size: 85%;
   min-height: 19px;
   padding-left: 145px;
-  color: #a5b6ce;
-  background: #1d1d1d;
+  color: #586E75;
+  /* background: #1d1d1d; */
+}
+body div.line[ltype=kill],
+body div.line[ltype=kick],
+body div.line[ltype=mode] {
+  font-size: 85%;
+  min-height: 19px;
+  padding-left: 145px;
+  color: #dc322f;
 }
 
 body div.line[ltype=topic] span.message {
@@ -527,9 +570,21 @@ body .inline_nickname {
 */
 
 body .sender[mtype=myself] {
-  color: #9A60FF;
+  color: #7AA6DA;
+
 }
 
+/* Start attempt at nick coloring for me */
+body div[ltype*=privmsg] .sender[mtype*=myself] {
+  color: #7AA6DA; 
+}
+.sender[mtype*=myself] {
+  color: #7AA6DA; 
+}
+
+div[mtype*=myself] {
+  background-color: rgba(66, 113, 174, 0.25); 
+}
 body .sender {
   margin-right: -.25em;
 
@@ -576,7 +631,8 @@ body div.line[ltype=action][highlight=true] {
   z-index: 191;
   position: relative;
   font-weight: normal;
-  background-color: #30473a;
+  background-color: #38010A !important;
+  color: #E0E2E4;
 }
 
 /* Date changes */
@@ -602,4 +658,26 @@ body div.date > span {
 
 body div.date + div#mark, body div.date + div#historic_messages + div#mark {
   display: none;
+}
+
+/* Begin Nick Coloring Block */
+.sender[nickname='kerio'] { color: pink !important; }
+.inline_nickname[nickname='kerio'] {color: pink !important;}
+.sender[nickname^='Dusty'] { color: #073642 !important; }
+.inline_nickname[nickname^='Dusty'] {color: #073642 !important;}
+.sender[nickname^='THE_GFR'] { color: #073642 !important; }
+.inline_nickname[nickname^='THE_GFR'] {color: #073642 !important;}
+.sender[nickname='_dave'] { color: #01DFD7 !important; }
+.inline_nickname[nickname='_dave'] {color: #01DFD7 !important;}
+.sender[nickname^='NDP'] { color: #586E75 !important; }
+.inline_nickname[nickname^='NDP'] {color: #586E75 !important;}
+.sender[nickname^='RdJss'] { color: #B40404 !important; }
+.inline_nickname[nickname^='RdJss'] {color: #B40404 !important;}
+.sender[nickname^='rdjss'] { color: #B40404 !important; }
+.inline_nickname[nickname^='rdjss'] {color: #B40404 !important;}
+.sender[nickname^='redjess'] { color: #B40404 !important; }
+.inline_nickname[nickname^='redjess'] {color: #B40404 !important;}
+.sender[nickname='Nelluk'] { color: #FF8000 !important; }
+.inline_nickname[nickname='Nelluk'] {color: #FF8000 !important;}
+
 }
