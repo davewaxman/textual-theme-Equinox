@@ -50,8 +50,8 @@ var NickColorGenerator = (function () {
 
     inlineNicks = message.querySelectorAll('.inline_nickname');
 
-   if (message.getAttribute('ltype') === 'action') {
-     // message.querySelector('.message').style.color = nickcolor;
+    if (message.getAttribute('ltype') === 'action') {
+    //  message.querySelector('.message').style.color = nickcolor;
     }
 
     for (i = 0; i < inlineNicks.length; i++) {
@@ -164,7 +164,7 @@ function dateChange(e) {
   // As such, we'll ignore all joins, modes, and topics, if they're more than MAXTIMEOFFSET milliseconds
   // from the current time
   ltype = e.getAttribute('ltype');
-  if (ltype === 'join' || ltype === 'topic' || ltype === 'mode') {
+  if (ltype !== 'privmsg') {
     if (Date.now() - timestamp > MAXTIMEOFFSET) {
       return;
     }
@@ -252,7 +252,7 @@ Textual.newMessagePostedToView = function (line) {
 
   // if it's a private message, colorize the nick and then track the state and fade away the nicks if needed
   if (message.getAttribute('ltype') === 'privmsg' || message.getAttribute('ltype') === 'action') {
-    //sender = message.getElementsByClassName('sender')[0];
+    sender = message.getElementsByClassName('sender')[0];
     new NickColorGenerator(message); // colorized the nick
 
     // Delete (ie, make foreground and background color identical) the previous line's nick, if it was set to be deleted
