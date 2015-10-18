@@ -342,7 +342,7 @@ body div[ltype="privmsg"][highlight=true][encrypted="true"] {
 }
 
 body div[ltype=privmsg] p[ltype=myself] .message {
-  color: #B7B7B7;
+ color: #B7B7B7;
 }
 
 body div[ltype=privmsg] p span.effect[color-number=1]:not([bgcolor-number]) {
@@ -570,16 +570,17 @@ body .inline_nickname {
 */
 
 body .sender[mtype=myself] {
-  color: #7AA6DA;
+  /* color: #7AA6DA;*/
+  color: #FFFFFF;
 
 }
 
 /* Start attempt at nick coloring for me */
 body div[ltype*=privmsg] .sender[mtype*=myself] {
-  color: #7AA6DA; 
+  color: #FFFFFF; 
 }
 .sender[mtype*=myself] {
-  color: #7AA6DA; 
+  color: #FFFFFF; 
 }
 
 div[mtype*=myself] {
@@ -667,8 +668,8 @@ body div.date + div#mark, body div.date + div#historic_messages + div#mark {
 .inline_nickname[nickname^='Dusty'] {color: #073642 !important;}
 .sender[nickname^='THE_GFR'] { color: #073642 !important; }
 .inline_nickname[nickname^='THE_GFR'] {color: #073642 !important;}
-.sender[nickname='_dave'] { color: #01DFD7 !important; }
-.inline_nickname[nickname='_dave'] {color: #01DFD7 !important;}
+.sender[nickname='_dave'] { color: #FFFFFF !important; }
+.inline_nickname[nickname='_dave'] {color: #FFFFFF !important;}
 .sender[nickname^='NDP'] { color: #586E75 !important; }
 .inline_nickname[nickname^='NDP'] {color: #586E75 !important;}
 .sender[nickname^='RdJss'] { color: #B40404 !important; }
