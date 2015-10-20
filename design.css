@@ -291,7 +291,7 @@ body div[ltype=notice] .senderContainer {
 }
 
 body div[ltype=notice] .message {
-  color: #f2f2f2;
+  color: #b58900;
 }
 
 /* PRIVMSG */
@@ -601,6 +601,7 @@ body .f {  /* fade out */
 .senderContainer {
   cursor: pointer;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 body div.line[ltype=privmsg]:not(.selectedUser),
