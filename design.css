@@ -14,9 +14,9 @@ body {
   z-index: 100;
   font-size: 12px;
   background-color: #001f2a;
-  font-family: system, -apple-system,
-      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
-  font-weight: 400;
+ /* font-family: system, -apple-system,
+      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande"; */
+  font-weight: 500;
   overflow-y: visible;
 }
 
@@ -240,7 +240,7 @@ div[id=mark] {
   position: relative;
   z-index: 295;
   margin-top: -1px;
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
   border-color: #D33682;
   -webkit-transition: 0.2s linear;
 }
