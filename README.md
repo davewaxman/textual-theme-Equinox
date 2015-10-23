@@ -1,4 +1,4 @@
-Textual Equinox Solarized Dark Style
+Textual IRC Client Equinox Solarized Dark Style / Theme
 
 This is a modification of the Equinox theme but using the Solarized Dark color scheme.
 
