@@ -1,4 +1,5 @@
 Textual Equinox Solarized Dark Style
+
 This is a modification of the Equinox theme but using the Solarized Dark color scheme.
 
 ![Preview Image](http://i.imgur.com/HL85Fd5.png)
