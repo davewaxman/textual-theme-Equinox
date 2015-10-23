@@ -1,10 +1,12 @@
-textual-theme-Equinox
+Textual Equinox Solarized Dark Style
+This is a modification of the Equinox theme but using the Solarized Dark color scheme.
+
+![Preview Image](http://i.imgur.com/HL85Fd5.png)
+Using San Francisco as a font and a very large font size of 24pt.
+
 =======================
 
 A massive overhaul of the nox theme for Textual 5:
-
-![Preview Image](http://i.imgur.com/xgOvbEA.png)
-(with Monaco 11pt, the recommended font)
 
 **Equinox** includes the following changes:
 * Update the nick color generation to avoid garish/high-contrast colors (red on black), or low-contrast (dark blue on black).
