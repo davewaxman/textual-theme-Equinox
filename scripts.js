@@ -81,7 +81,7 @@ var NickColorGenerator = (function () {
     return hash >>> 0;
   };
 
-  NickColorGenerator.prototype.generateColorFromNickname = function (nick) {
+   NickColorGenerator.prototype.generateColorFromNickname = function (nick) {
     var nickhash = this.generateHashFromNickname(nick);
 
     var h           = nickhash % 360;

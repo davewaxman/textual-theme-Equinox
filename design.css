@@ -12,11 +12,11 @@ body {
   color: #B7B7B7;
   height: 100%;
   z-index: 100;
-  font-size: 12px;
+  /* font-size: 12px; */
   background-color: #001f2a;
-  font-family: system, -apple-system,
-      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
-  font-weight: 400;
+ /* font-family: system, -apple-system,
+      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande"; */
+  font-weight: 500;
   overflow-y: visible;
 }
 
@@ -170,14 +170,14 @@ a:hover {
   border-top: 1px solid #404040;
   text-shadow: 1px 1px rgba(10, 10, 10, 0.7);
   color: #FFFFFF;
-  background-color: #859900;
+  background-color: #073642;
   display: none;
   overflow: hidden;
 }
 
 #scrolling_history .senderContainer {
   color: #FFFFFF;
-  background-color: #859900;
+  background-color: #073642;
 }
 /* @group Images */
 
@@ -240,7 +240,7 @@ div[id=mark] {
   position: relative;
   z-index: 295;
   margin-top: -1px;
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
   border-color: #D33682;
   -webkit-transition: 0.2s linear;
 }
@@ -275,7 +275,7 @@ body div.line[ltype=wallops] {
 body div[ltype=ctcp] .senderContainer,
 body div[ltype=notice] .senderContainer {
   color: #b58900;
-  font-weight: 700;
+  font-weight: 800;
   min-height:23px;
   width: 134px;
   padding-right:7px;
@@ -291,7 +291,7 @@ body div[ltype=notice] .senderContainer {
 }
 
 body div[ltype=notice] .message {
-  color: #f2f2f2;
+  color: #b58900;
 }
 
 /* PRIVMSG */
@@ -601,6 +601,7 @@ body .f {  /* fade out */
 .senderContainer {
   cursor: pointer;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 body div.line[ltype=privmsg]:not(.selectedUser),
